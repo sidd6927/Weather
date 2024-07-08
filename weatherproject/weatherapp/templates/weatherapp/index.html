@@ -1,0 +1,58 @@
+{%load static%}
+<link rel="stylesheet" href="{%static 'styles.css'%}">
+
+<body style="background-image: 'weatherbg.jpg';">
+    
+
+<div class="form-container">
+<form method="POST">
+    {%csrf_token%}
+    <input type="text" placeholder="Enter city " name="city">
+    <button type="submit" style="color: rgb(83, 45, 211); background-color: rgb(32, 157, 229);">Submit</button>
+    <h7 style="color: rgb(55, 128, 152);font-size:xx-large;">{{time}}</h7>
+</form>
+</div>  
+
+<div class="weather-wrapper">
+        <div class="weather-card madrid">
+            <!-- <div class="weather-icon sun"></div> -->
+            <h1>{{tomtemp}}º</h1>
+            <p>{{city}}-Today</p>
+    </div>
+    <div class="weather-card london">
+        <!-- <div class="weather-icon cloud"></div> -->
+        <h1>{{temp}}º</h1>
+
+        <p>{{city}}-Tomorrow</p>
+       
+    </div>
+    <div class="weather-wrapper">
+        <div class="weather-card madrid">
+            <!-- <div class="weather-icon sun"></div> -->
+            <h1>{{thirdtemp}}º</h1>
+            <p>{{city}}-Day after </p>
+        </div>
+</div> 
+
+  
+</body>
+  
+
+ 
+ 
+ 
+    <!-- <form method="POST">
+        <link rel="stylesheet" href="{%static 'styles.css'%}">
+        {%csrf_token%}
+        <input type="text" placeholder="Enter city " name="city">
+        <button type="submit">submit</button>
+
+    </form>
+    <h1>{{temp}}</h1>
+    <h1>{{text}}</h1>
+    <h2>{{tdate}}</h2>
+    <h2>{{tomdate}}</h2>
+    <h4>{{city}}</h4>
+     -->
+
+</html>
